@@ -1,0 +1,347 @@
+/* Estilos para a newsletter online da Gradus Vita baseada no design do Insper */
+
+/* Variáveis de cores extraídas do site do Insper */
+:root {
+  --amarelo-insper: #FFCC00;
+  --vermelho-insper: #E30613;
+  --azul-insper: #0047BB;
+  --verde-insper: #00A651;
+  --rosa-insper: #F5A9B8;
+  --lilas-insper: #9B59B6;
+  --cinza-claro: #F5F5F5;
+  --cinza-medio: #CCCCCC;
+  --cinza-escuro: #333333;
+  --preto: #000000;
+  --branco: #FFFFFF;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--cinza-escuro);
+  background-color: var(--branco);
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Cabeçalho */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--cinza-medio);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-nav li {
+  margin-left: 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--cinza-escuro);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header-nav a:hover {
+  color: var(--vermelho-insper);
+}
+
+/* Banner principal */
+.banner {
+  position: relative;
+  background-color: var(--amarelo-insper);
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.banner-content {
+  max-width: 60%;
+}
+
+.banner h1 {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--preto);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Seções */
+.section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: var(--preto);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--vermelho-insper);
+  margin-top: 10px;
+}
+
+/* Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  border: 1px solid var(--cinza-medio);
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Variantes de cards com bordas coloridas */
+.card-red {
+  border-top: 5px solid var(--vermelho-insper);
+}
+
+.card-yellow {
+  border-top: 5px solid var(--amarelo-insper);
+}
+
+.card-blue {
+  border-top: 5px solid var(--azul-insper);
+}
+
+.card-green {
+  border-top: 5px solid var(--verde-insper);
+}
+
+.card-purple {
+  border-top: 5px solid var(--lilas-insper);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--preto);
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+/* Tags de categoria */
+.category-tag {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--amarelo-insper);
+  color: var(--preto);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--vermelho-insper);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c00;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--vermelho-insper);
+  color: var(--vermelho-insper);
+}
+
+.btn-outline:hover {
+  background-color: var(--vermelho-insper);
+  color: var(--branco);
+}
+
+/* Eventos */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  padding: 20px;
+  position: relative;
+}
+
+.event-date {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.event-month {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.event-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.event-time {
+  font-size: 0.9rem;
+  color: var(--cinza-escuro);
+  margin-bottom: 15px;
+}
+
+.event-type {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--amarelo-insper);
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--branco);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: var(--cinza-medio);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--branco);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-content {
+    max-width: 100%;
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .cards-container,
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+}
